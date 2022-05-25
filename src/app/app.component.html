@@ -12,10 +12,15 @@
             </p>
     
             <div class="box" style="margin-top:15px">
-              <input class="input" > 
+              <!-- <input class="input" (input)="onInput($event)">  -->
+              <input class="input" (input)="onInput($event?.target)"> 
             </div>  
   
-            <div class="field has-text-centered" *ngIf="">
+            <div 
+            class="field has-text-centered" 
+            *ngIf="enteredText === randomText"
+            style="color:green"
+            >
               <h2>Success!</h2>
             </div> 
   
