@@ -12,8 +12,20 @@ export class AppComponent {
   enteredText = "";
 
   onInput(event: Event | any){
-    // console.log(event.data)
     this.enteredText = event.value
+    // this.enteredText = event.data
     console.log(this.enteredText);
   }
+
+  compare(letter: any, enteredText: any){
+     
+      if(!enteredText){
+        return 'default';
+      }
+
+      return letter === enteredText ? 'green' : 'red';
+  }
 }
+
+
+// Character by Character Comparison + Styling by Comparison (very interesting part)
