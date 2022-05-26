@@ -13,19 +13,15 @@ export class AppComponent {
 
   onInput(event: Event | any){
     this.enteredText = event.value
-    // this.enteredText = event.data
     console.log(this.enteredText);
   }
 
   compare(letter: any, enteredText: any){
      
-      if(!enteredText){
+      if(!enteredText || enteredText === " "){
         return 'default';
       }
 
-      return letter === enteredText ? 'green' : 'red';
+      return letter.toLowerCase() === enteredText.toLowerCase() ? 'green' : 'red';
   }
 }
-
-
-// Character by Character Comparison + Styling by Comparison (very interesting part)

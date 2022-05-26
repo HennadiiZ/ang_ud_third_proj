@@ -8,7 +8,6 @@
             </h1>
     
             <p class="has-text-centered">
-              <!-- {{ randomText }} -->
               <span 
               [class]="compare(letter, enteredText[i])"
               *ngFor="let letter of randomText.split(''); let i = index;"
@@ -16,7 +15,6 @@
             </p>
     
             <div class="box" style="margin-top:15px">
-              <!-- <input class="input" (input)="onInput($event)">  -->
               <input class="input" (input)="onInput($event?.target)"> 
             </div>  
   
